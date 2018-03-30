@@ -8,6 +8,8 @@ elif age>=40:
 else:
 	print('your age is too young!')
 	print('----------------------')
+	
+#在python脚本运行的时候按回车到下一行不用按空格直接输入else,elif 即可
 birth=input('birth:')
 birth=int(birth)
 if birth>2000:

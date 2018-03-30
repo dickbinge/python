@@ -25,3 +25,21 @@ for x in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
 print(sum)
 
 sum1=0
+
+#用for循环输出前100的和
+def my_sum(n):
+	sum=0
+	for x in range(n+1):
+		sum=sum+x
+	print(sum)
+	
+#写一个求绝对值的方法
+def my_abs(x):
+	if not isinstance(x,(int ,float)):
+		raise TypeError('This is a operand type')
+		#当入参不是数值类型的视乎抛出自定义的异常
+	if x>=0:
+		return x
+	else:
+		return -x
+		

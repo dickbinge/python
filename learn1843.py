@@ -84,5 +84,66 @@ def hanoi(n,a,b,c):
 		move(n,a,c)
 		hanoi(n-1,b,a,c)
 
+#切片 相当于slice函数
+L=['Mick','Mary','Jack','Tom','Pery']
+r=L[0:3] #表示从索引0开始取3个值
+q=L[-2:-1] #倒序取值
+
+L=list(range(100))  #含有前100的数组
+
+L[:10]  #前10个数
+L[-10:] #取后10个数
+L[10:20] #取10~20
+L[-20:-10] #取80~90
+L[10:20:2] #间隔2取数
+L[-10::5] #间隔5取数
+L[:10:4]  #间隔4取数
+L[:] #完全复制一个数组
+
+#去除前后空格
+def trim(str):
+	while str[:1]=='':
+		str=str[1:]
+	while str[-1:]=='':
+		str=str[:-1]
+	return str
+
+#使用迭代查找一个list中的最大最小值，并返回一个tuple
+def findMinAndMax(L):
+	if len(L)==0:
+		return (None,None)
+	else:
+		min=L[0]
+		max=L[0]
+		for x in L:
+			if min>x:
+				min=x
+			if max<x:
+				max=x
+		return (max,min)
+#再回顾一下typle ：没有任何修改的方法(例如 push,add，pop，remove) ,定义出来里边值就是固定的
+
+
+#列表生成器
+
+list(range(1,11))  #1~10
+
+#传统的写法
+L=[]
+for x in range(1,11):
+	L.append(x*x)   #1~10平方
+
+#列表生成器的写法
+
+[x*x for x in range(1,11)] 
+
+[x*x for x in range(1,11) if x%2==0]
+
+[m+n for m in 'abc' for n in 'ABC'] #组合
+
+#列出当前目录下的所有文件
+
+import os  #导入os模块
+[d for d in os.listdir('.')] #os.listdir可以列出当前目录下的所有文件名称
 
 #create by Jingbin  2018/4/3

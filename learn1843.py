@@ -73,7 +73,7 @@ def hannuo(n,a,b,c):
 
 
 #汉诺塔问题
-global m=0
+m=0
 def move(disk,start,end):
 	print('第%s次移动:%d号圆盘由%s-->%s' %(++m,disk,start,end))
 def hanoi(n,a,b,c):
